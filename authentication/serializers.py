@@ -1,6 +1,3 @@
-from dataclasses import field, fields
-import email
-from pyexpat import model
 from rest_framework import serializers
 from django.contrib.auth.models import User
 class UserSerializer(serializers.ModelSerializer):
