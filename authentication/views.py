@@ -13,4 +13,8 @@ class RegisterView(GenericAPIView):
             return Response(serializer.data, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-        
+class LoginView(GenericAPIView):
+    def post(self, request):
+        username = request.data.get('username', False)
+        password = request.data.get('password', False)
+        user = seriali
